@@ -1,0 +1,33 @@
+{
+  "TargetCapacity": 1,
+  "IamFleetRole": "arn:aws:iam::412779626743:role/aws-service-role/spotfleet.amazonaws.com/AWSServiceRoleForEC2SpotFleet",
+  "AllocationStrategy": "diversified",
+  "SpotPrice": "0.25",
+  "Type": "maintain",
+  "ReplaceUnhealthyInstances": true,
+  "TerminateInstancesWithExpiration": true,
+  "LaunchSpecifications": [
+    {
+      "ImageId": "ami-01f99b4d609a9f41e",
+      "InstanceType": "g4dn.xlarge",
+      "KeyName": "whisper-transcription-key",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-b2f71db9"
+        }
+      ],
+      "SubnetId": "subnet-687ee010,subnet-d2c5ac8f,subnet-728d6d58",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/sda1",
+          "Ebs": {
+            "VolumeSize": 50,
+            "VolumeType": "gp3",
+            "DeleteOnTermination": true
+          }
+        }
+      ]
+    }
+  ],
+  "OnDemandTargetCapacity": 0
+}

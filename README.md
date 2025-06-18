@@ -1,27 +1,46 @@
-# Claude Historical Analysis Interface
+# Claude Historical Analysis Platform
 
-AI-powered historical analysis platform using Claude Sonnet 4 and vector search for sophisticated analysis of revolutionary periods.
+Complete AI-powered historical research platform with automated transcription, vector processing, and sophisticated analysis capabilities.
 
-## Features
-- AI Episode Detection: Intelligently identifies specific podcast episodes
-- Vector Search: Semantic search across 2880+ indexed transcript chunks  
-- Cross-Revolution Analysis: Compare events across different periods
-- Multiple Analysis Types: Basic, comparative, character, thematic, chronological
-- Production Ready: External access with monitoring
+## 🏗️ System Architecture
 
-## Quick Start
-1. Clone the repository
-2. Copy .env.template to .env and add your API keys
-3. Install dependencies: pip install -r requirements.txt
-4. Run: ./start_production.sh
+### [Phase 1: Transcription](1-transcription/)
+AWS Spot Fleet-based podcast transcription using OpenAI Whisper
+- GPU-accelerated processing (8-10x faster)
+- Cost-effective spot pricing
+- Automated deployment and teardown
 
-## Requirements
+### [Phase 2: RAG Processing](2-rag-processing/)
+Document processing pipeline for vector database preparation
+- Metadata-first processing approach
+- OpenAI embeddings integration
+- Qdrant vector database setup
+
+### [Phase 3: Analysis Interface](3-analysis-interface/)
+Claude Sonnet 4-powered web interface for historical analysis
+- AI episode detection
+- 5 sophisticated analysis types
+- Cross-revolution comparative studies
+
+## 🚀 Quick Start
+
+Each phase has its own README with detailed setup instructions. Follow phases in order:
+
+1. **Transcription**: Convert audio to text transcripts
+2. **RAG Processing**: Index transcripts into vector database  
+3. **Analysis Interface**: Query and analyze historical content
+
+## 📊 System Capabilities
+
+- **Episodes Processed**: 336+ across 11 revolutionary periods
+- **Vector Database**: 2880+ searchable chunks
+- **Time Coverage**: 275+ years of revolutionary history
+- **Query Types**: Basic, comparative, character, thematic, chronological
+
+## 🔧 Requirements
+
 - Python 3.12+
-- Qdrant vector database
-- Claude API key (Anthropic)
+- AWS account (for transcription)
 - OpenAI API key
-
-## System Status
-- Episodes Processed: 336+ across 11 seasons
-- Vector Count: 2880+ semantic chunks
-- Coverage: 275+ years of revolutionary history
+- Anthropic/Claude API key
+- Google Cloud credentials (optional)
