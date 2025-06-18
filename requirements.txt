@@ -1,0 +1,28 @@
+# Production Requirements for Laptop 2 Claude Interface
+
+# Core RAG and AI Dependencies
+streamlit>=1.28.0
+anthropic>=0.8.0
+qdrant-client>=1.7.0
+
+# Google Cloud Integration (existing infrastructure)
+google-cloud-storage>=2.10.0
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization and UI
+plotly>=5.17.0
+matplotlib>=3.7.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+certifi>=2023.7.22
+
+# Production optimizations
+gunicorn>=21.2.0
+watchdog>=3.0.0

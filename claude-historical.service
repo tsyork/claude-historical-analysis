@@ -1,0 +1,16 @@
+[Unit]
+Description=Claude Historical Analysis Interface
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=exec
+User=ubuntu
+WorkingDirectory=/home/ubuntu/claude_historical_production
+Environment=PATH=/home/ubuntu/claude_historical_production/venv/bin
+ExecStart=/home/ubuntu/claude_historical_production/start_production.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
